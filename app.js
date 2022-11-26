@@ -30,7 +30,6 @@ new Vue({
             this.view_details = false;
         }
     },
-
     mounted(){
         this.fetchCountries()
     }
