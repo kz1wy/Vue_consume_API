@@ -7,7 +7,7 @@ body{
     background-color: #3d64;
     margin-top: 30px;
 }
-.container2{
+/* .container2{
     background-color: #ffffff;
     width: 80vw;
     max-width: 37.5em;
@@ -39,4 +39,20 @@ body{
     border-bottom: 2px solid #3d64e6;
     outline: none;
     color: #222;
+} */
+.card{
+    background-color:antiquewhite;
+}
+
+
+.container a:hover {
+    background-color: crimson;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-body{
+    padding: 20px;
 }

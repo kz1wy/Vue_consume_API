@@ -30,7 +30,7 @@
                     <div class="card" style="width: 18rem;">
                         <img :src="i.flags.png" class="card-img-top" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{i.name.common}}</h5>
+                            <h2 class="card-title">{{i.name.common}}</h2>
                             <p class="card-text">Population: {{i.population}} </p>
                             <p class="card-text">Region: {{i.region}}</p>
                             <p class="card-text">Status: {{i.status}}</p>
@@ -48,7 +48,7 @@
                     <div class="card" style="width: 18rem;">
                         <img :src="country.flags.png" class="card-img-top" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{country.name.common}}</h5>
+                            <h2 class="card-title">{{country.name.common}}</h2>
                             <p class="card-text">Population: {{country.population}} </p>
                             <p class="card-text">Region: {{country.region}}</p>
                             <p class="card-text">Status: {{country.status}}</p>
@@ -63,6 +63,12 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="container2"> 
+                <div class="search">
+                    <input type="text" id="country-input" placeholder="Enter a country name here"/>
+                    <button id="search-btn">Search</button>
+                </div>
+            </div> -->
         </div>
 
     </div>
@@ -72,13 +78,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src='app.js'></script>
-    <div class="container2"> 
-        <div class="search">
-            <input type="text" id="country-input" placeholder="Enter a country name here" v-model="search"/>
-            <button id="search-btn">Search</button>
-        </div>
-        <div id="result"></div>
-    </div>
+    
 </body>
 
 </html>
