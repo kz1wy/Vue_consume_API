@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm project</title>
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -24,40 +24,35 @@
 <body>
     <div id="app">
         <div class="container">
-            <div v-if="view_details">
-                <a href="#" @click.prevent="goBack" class="btn btn-success">Countries</a>
+            <div v-if="view_details" style="margin:auto; width: 50%; padding: 10px;">
+                <a href="#" @click.prevent="goBack" class="btn">Go back</a>
                 <div v-for="i in country">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 40rem;">
                         <img :src="i.flags.png" class="card-img-top" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title">{{i.name.common}}</h2>
-                            <p class="card-text">Population: {{i.population}} </p>
+                            <p class="card-text">Population: {{i.population}} people </p>
                             <p class="card-text">Region: {{i.region}}</p>
                             <p class="card-text">Status: {{i.status}}</p>
-                            <p class="card-text">Area: {{i.area}}</p>
-                            <p class="card-text">Capital: {{ i.capital }}</p>
+                            <p class="card-text">Area: {{i.area}} km²</p>
+                            <p class="card-text">Capital: {{i.capital}}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div v-else>
-                <h1>{{title}}</h1>
+                <h1 style="color: rgb(198, 186, 197); text-align: center;">{{title}}</h1>
+    
+                <!-- <input style="width: 300px;" type="search" class="form-control rounded" placeholder="Search" v-model="searchValue" />
+                <button @click.prevent="search" style="width: 50px; background-color:antiquewhite; " type="submit">Go</button> -->
+                <br><br>
                 <div class="row">
-                <!-- display if there's at least 1 country -->
                 <div class="col-md-3" v-if="countries.length > 0" v-for="country in countries">
                     <div class="card" style="width: 18rem;">
                         <img :src="country.flags.png" class="card-img-top" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title">{{country.name.common}}</h2>
-                            <p class="card-text">Population: {{country.population}} </p>
-                            <p class="card-text">Region: {{country.region}}</p>
-                            <p class="card-text">Status: {{country.status}}</p>
-                            <p class="card-text">Area: {{country.area}}</p>
-                            <p class="card-text">Capital: {{ country.capital }}</p>
-                            <p class="card-text">Capital: {{ country.idd.root }}</p>
-
-
-                            <a href="#" @click.prevent="viewDetails(country.cca2)" class="btn btn-primary">View
+                            <a href="#" @click.prevent="viewDetails(country.cca2)" class="btn">View
                                 details</a>
                         </div>
                     </div>

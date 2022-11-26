@@ -7,10 +7,11 @@ new Vue({
             title: 'Countries in The World',
             countries: [],
             country:{},
-            view_details:false
+            view_details:false,
+            searchValue:''
         }
     },
-
+    
     methods:{
         fetchCountries: function(){
             var url = 'https://restcountries.com/v3.1/all';
@@ -28,9 +29,17 @@ new Vue({
         },
         goBack: function(){
             this.view_details = false;
-        }
+        },
+        // search: function(cn){
+        //     cn = searchValue;
+        //     if(cn.length > 0){
+        //         this.countries = countries.filter(country => country.name.common.toLowerCase().includes
+        //         (cn.toLowerCase().trim()))
+        //     }
+        // }
     },
     mounted(){
         this.fetchCountries()
     }
+
 })

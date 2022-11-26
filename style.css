@@ -1,12 +1,43 @@
-*{
+* {
     padding: 0;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
-body{
-    background-color: #3d64;
-    margin-top: 30px;
+
+body {
+    background-color: #293343;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    font-family: 'Montserrat';
 }
+
+.bg__gradient {
+    background-image: linear-gradient(90deg, #eb3434, #eb5e34, #eb8334, #eba434, #ebcc34, #ebeb34, #c3eb34, #89eb34, #58eb34, #34eb52, #34ebcc, #34d5eb, #34a8eb, #346beb, #3734eb, #7734eb, #a834eb, #eb34c3, #eb3489, #eb3461);
+    filter: blur(500px);
+    border-radius: 100%;
+    background-size: 1000% 100%;
+
+    animation: gradient 10s infinite ease-out;
+
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+
+    z-index: 0
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    100% {
+        background-position: 100% 100%
+    }
+}
+
 /* .container2{
     background-color: #ffffff;
     width: 80vw;
@@ -40,8 +71,8 @@ body{
     outline: none;
     color: #222;
 } */
-.card{
-    background-color:antiquewhite;
+.card {
+    background-color: antiquewhite;
 }
 
 
@@ -51,8 +82,29 @@ body{
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    color: rgba(209, 150, 23, 0.616);
+    image-rendering: auto;
 }
-.card-body{
+
+.card-body {
     padding: 20px;
+}
+
+.btn {
+    border-radius: 1.2em;
+    background: rgb(13, 0, 26);
+    color: white;
+}
+
+.btn:hover {
+    color: #FDB0FF;
+    text-shadow: 0px 3px 15px #7a727a;
+}
+
+.search-input {
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;
+    
 }
