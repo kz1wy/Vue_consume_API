@@ -35,9 +35,6 @@ new Vue({
                 this.countries = this.countries.filter((item)=> 
                 item.name.common.toLowerCase().includes(this.searchValue.toLowerCase()))  
             }
-            else{
-                this.fetchCountries()
-            }
         }
     },
     // computed:{
