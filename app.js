@@ -8,7 +8,7 @@ new Vue({
             countries: [],
             country:{},
             view_details:false,
-            searchValue:null
+            search_value:null
         }
     },
      
@@ -31,17 +31,17 @@ new Vue({
             this.view_details = !this.view_details;
         },
         search: function(){
-            if(this.searchValue.length>0){
+            if(this.search_value.length>0){
                 this.countries = this.countries.filter((item)=> 
-                item.name.common.toLowerCase().includes(this.searchValue.toLowerCase()))  
+                item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))  
             }
         }
     },
     // computed:{
     //     resultQuery(){
-    //         if(this.searchValue.length>0){
+    //         if(this.search_value.length>0){
     //             this.countries = this.countries.filter((item)=> 
-    //             item.name.common.toLowerCase().includes(this.searchValue.toLowerCase()))  
+    //             item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))  
     //         }
     //     }
     // },
