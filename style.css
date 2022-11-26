@@ -83,8 +83,9 @@ body {
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    color: rgba(209, 150, 23, 0.616);
+    color: red;
     image-rendering: auto;
+    background-color: rgba(248, 247, 250, 0.616);
 }
 
 .card-body {

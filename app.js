@@ -38,16 +38,13 @@ new Vue({
         }
     },
     // computed:{
-        //     resultQuery(){
-        //         if(this.searchValue){
-        //             return this.countries.filter((item)=>{
-        //                 return this.searchValue.toLowerCase().every(v => item.name.common.toLowerCase().includes(v))
-        //             })
-        //         }else{
-        //             return this.countries;
-        //         }
-        //     }
-        // },
+    //     resultQuery(){
+    //         if(this.searchValue.length>0){
+    //             this.countries = this.countries.filter((item)=> 
+    //             item.name.common.toLowerCase().includes(this.searchValue.toLowerCase()))  
+    //         }
+    //     }
+    // },
 
     mounted(){
         this.fetchCountries()
