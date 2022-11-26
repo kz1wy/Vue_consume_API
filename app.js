@@ -8,36 +8,50 @@ new Vue({
             countries: [],
             country:{},
             view_details:false,
-            searchValue:''
+            searchValue:null
         }
     },
-    
+     
     methods:{
         fetchCountries: function(){
             var url = 'https://restcountries.com/v3.1/all';
             //get all data of countries
             axios.get(url).then(res=>{
                 this.countries = res.data;
-                console.log(this.countries);
+                // console.log(this.countries);
             })
         },
         viewDetails: function(cca2){
             let allCountries = this.countries;
             let country = allCountries.filter(country=>country.cca2 == cca2);
             this.country = country;
-            this.view_details = true;
+            this.view_details = !this.view_details;
         },
         goBack: function(){
-            this.view_details = false;
+            this.view_details = !this.view_details;
         },
-        // search: function(cn){
-        //     cn = searchValue;
-        //     if(cn.length > 0){
-        //         this.countries = countries.filter(country => country.name.common.toLowerCase().includes
-        //         (cn.toLowerCase().trim()))
-        //     }
-        // }
+        search: function(){
+            if(this.searchValue.length>0){
+                this.countries = this.countries.filter((item)=> 
+                item.name.common.toLowerCase().includes(this.searchValue.toLowerCase()))  
+            }
+            else{
+                this.fetchCountries()
+            }
+        }
     },
+    // computed:{
+        //     resultQuery(){
+        //         if(this.searchValue){
+        //             return this.countries.filter((item)=>{
+        //                 return this.searchValue.toLowerCase().every(v => item.name.common.toLowerCase().includes(v))
+        //             })
+        //         }else{
+        //             return this.countries;
+        //         }
+        //     }
+        // },
+
     mounted(){
         this.fetchCountries()
     }
