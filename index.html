@@ -21,13 +21,13 @@
 
 </head>
 
-<body>
+<body style="background-image: url(images/World-Map.png)";>
     <div id="app">
         <div class="container">
-            <div v-if="view_details" style="margin:auto; width: 50%; padding: 10px;">
+            <div v-if="view_details">
                 <a href="#" @click.prevent="goBack" class="btn">Go back</a>
                 <div v-for="i in country">
-                    <div class="card" style="width: 40rem;">
+                    <div class="card" style="width: 50rem;">
                         <img :src="i.flags.png" class="card-img-top" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title">{{i.name.common}}</h2>
@@ -42,7 +42,7 @@
             </div>
             <div v-else>
                 
-                <h1 style="color: rgb(198, 186, 197); text-align: center;">{{title}}</h1>
+                <h1 style="color:aliceblue; text-align: center;">{{title}}</h1>
                 <!-- search bar -->
                 <input id="userInput" style="width: 300px;" type="search" class="form-control rounded" placeholder="Search" @focus = fetchCountries() v-model="search_value"/>
                 <button id="go" @click.prevent="search" style="width: 50px; background-color:antiquewhite; " type="submit">Go</button>
