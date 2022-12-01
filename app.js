@@ -21,7 +21,7 @@ new Vue({
                 // console.log(this.countries);
             })
         },
-        viewDetails: function(cca2){
+        viewDetails: function(cca2){ //show country details base on its cca2 id
             let allCountries = this.countries;
             let country = allCountries.filter(country=>country.cca2 == cca2);
             this.country = country;
@@ -33,10 +33,27 @@ new Vue({
         search: function(){
             if(this.search_value.length>0){
                 this.countries = this.countries.filter((item)=> 
-                item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))  
+                item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))
+                this.search_value = '';
+                if(this.countries.length == 0){
+                    setTimeout(() => this.fetchCountries(), 2000);
+                }
+            }
+            else{
+                this.countries = this.fetchCountries();
             }
         }
     },
+    // watch: {
+    //     search: function(){
+    //         if(this.search_value.length>0){
+    //             this.countries = this.countries.filter((item)=> 
+    //             item.name.common.toLowerCase().includes(this.search_value.toLowerCase()));
+                
+    //         }
+            
+    //     }
+    // },
     // computed:{
     //     resultQuery(){
     //         if(this.search_value.length>0){
@@ -48,6 +65,16 @@ new Vue({
 
     mounted(){
         this.fetchCountries()
+        
     }
 
 })
+//trigger button with enter
+var input = document.getElementById("userInput");
+input.addEventListener("keypress", function(event) {
+    
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("go").click();
+    }
+});

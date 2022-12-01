@@ -45,7 +45,7 @@
                 <h1 style="color: rgb(198, 186, 197); text-align: center;">{{title}}</h1>
                 <!-- search bar -->
                 <input id="userInput" style="width: 300px;" type="search" class="form-control rounded" placeholder="Search" @focus = fetchCountries() v-model="search_value"/>
-                <button @click.prevent="search" style="width: 50px; background-color:antiquewhite; " type="submit">Go</button>
+                <button id="go" @click.prevent="search" style="width: 50px; background-color:antiquewhite; " type="submit">Go</button>
                 <br><br>
                 <div class="row">
                     <h3 style="color:white">{{countries.length}} result(s)</h3>
