@@ -36,7 +36,7 @@ new Vue({
                 item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))
                 this.search_value = '';
                 if(this.countries.length == 0){
-                    setTimeout(() => this.fetchCountries(), 2000);
+                    setTimeout(() => this.fetchCountries(), 1500);
                 }
             }
             else{
