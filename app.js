@@ -17,7 +17,7 @@ new Vue({
             var url = 'https://restcountries.com/v3.1/all';
             //get all data of countries
             axios.get(url).then(res=>{
-                this.countries = res.data;
+                this.countries = res.data;  
                 // console.log(this.countries);
             })
         },
