@@ -44,24 +44,6 @@ new Vue({
             }
         }
     },
-    // watch: {
-    //     search: function(){
-    //         if(this.search_value.length>0){
-    //             this.countries = this.countries.filter((item)=> 
-    //             item.name.common.toLowerCase().includes(this.search_value.toLowerCase()));
-                
-    //         }
-            
-    //     }
-    // },
-    // computed:{
-    //     resultQuery(){
-    //         if(this.search_value.length>0){
-    //             this.countries = this.countries.filter((item)=> 
-    //             item.name.common.toLowerCase().includes(this.search_value.toLowerCase()))  
-    //         }
-    //     }
-    // },
 
     mounted(){
         this.fetchCountries()

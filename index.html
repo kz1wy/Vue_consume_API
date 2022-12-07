@@ -16,9 +16,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
-    <link rel ="stylesheet" href="style.css"/>
-    <link rel ="stylesheet" href="footer.css"/>
-    <link rel ="stylesheet" href="header.css"/>
+    <link rel ="stylesheet" href="css/style.css"/>
+    <link rel ="stylesheet" href="css/footer.css"/>
+    <link rel ="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 
@@ -62,7 +62,7 @@
                 <button id="go" @click.prevent="search" style="width: 50px; background-color:antiquewhite; margin-top: 10px; " type="submit">Go</button>
                 <br><br>
                 <div class="row">
-                    <!-- <h3 style="color: white;">{{countries.length}} result(s)</h3> -->
+                    <h3 style="color: white;">{{countries.length}} result(s)</h3>
                 <div class="col-sm-auto" v-if="countries.length > 0" v-for="country in countries">
                     <div class="card" style="width: 18rem;">
                         <img :src="country.flags.png" class="card-img-top" alt="Card image cap">
