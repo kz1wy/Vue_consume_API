@@ -1,1 +1,1 @@
-"Ứng dụng SPA được viết bằng VueJs sử dụng countries rest API" 
+"learn how to fetch API using rest countries API with VueJS" 
